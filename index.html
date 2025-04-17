@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>えなの公式ホームページ</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #fceff9, #f9f0ff);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      animation: fadeIn 1.5s ease;
+    }
+
+    header {
+      margin-top: 50px;
+      animation: bounceIn 1s ease;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #ff69b4;
+      text-shadow: 1px 1px #fff;
+      margin: 0;
+    }
+
+    .button-container {
+      margin-top: 40px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .cute-button {
+      background: #fff0f6;
+      border: 2px solid #ffb6c1;
+      padding: 15px 25px;
+      border-radius: 30px;
+      font-size: 1.1em;
+      color: #d6336c;
+      cursor: pointer;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .cute-button:hover {
+      background: #ffe0ef;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #ffb6c1;
+    }
+
+    .character-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin: 60px 0 40px;
+      padding: 0 20px;
+    }
+
+    .character-image {
+      max-width: 180px;
+      height: auto;
+      animation: fadeInUp 1.2s ease;
+      transition: transform 0.3s ease;
+    }
+
+    .character-image:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      padding: 20px;
+      color: #999;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.9); opacity: 0; }
+      60% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>えなの公式ホームページ</h1>
+  </header>
+
+  <div class="button-container">
+    <button class="cute-button" onclick="alert('えなを応援してくれてありがとう♡')">応援メッセージ</button>
+    <a class="cute-button" href="https://x.com/Ena_24s" target="_blank">X（旧Twitter）へ</a>
+    <button class="cute-button" onclick="alert('コンテンツは準備中です…！')">もっと見る</button>
+  </div>
+
+  <div class="character-gallery">
+    <img src="character1.png" alt="キャラ1" class="character-image" />
+    <img src="character2.png" alt="キャラ2" class="character-image" />
+    <img src="character3.png" alt="キャラ3" class="character-image" />
+    <!-- 必要に応じてここにさらに画像追加 -->
+  </div>
+
+  <footer>© 2025 えな All Rights Reserved.</footer>
+</body>
+</html>
