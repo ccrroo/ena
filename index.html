@@ -115,41 +115,36 @@
     <button class="cute-button" onclick="alert('コンテンツは準備中です…！')">もっと見る</button>
   </div>
 
-  <!-- キャラ画像 真ん中寄せ -->
   <div class="character-gallery">
      <img src="image/enatou.png" alt="キャラ1" class="character-image" id="spinning-image" />
   </div>
 
-  <script>
+<script>
   const img = document.getElementById("spinning-image");
   let rotation = 0;
   let speed = 0;
-  let maxSpeed = 20; // 最大スピード
-  let animationId = null;
+  const maxSpeed = 20;
+  let animationRunning = false;
 
   function rotateImage() {
     rotation += speed;
     img.style.transform = `rotate(${rotation}deg)`;
-    speed *= 0.99; // だんだん減速（自然感）
-    if (Math.abs(speed) > 0.05) {
-      animationId = requestAnimationFrame(rotateImage);
-    } else {
-      speed = 0;
-      cancelAnimationFrame(animationId);
+    requestAnimationFrame(rotateImage);
+  }
+
+  function startSpinning() {
+    speed += 2;
+    if (speed > maxSpeed) speed = maxSpeed;
+
+    if (!animationRunning) {
+      animationRunning = true;
+      rotateImage(); 
     }
   }
 
-  img.addEventListener("click", () => {
-    speed += 2;
-    if (speed > maxSpeed) speed = maxSpeed;
-    if (!animationId) rotateImage();
-  });
-
-  img.addEventListener("touchstart", () => {
-    speed += 2;
-    if (speed > maxSpeed) speed = maxSpeed;
-    if (!animationId) rotateImage();
-  });
+  img.addEventListener("click", startSpinning);
+  img.addEventListener("touchstart", startSpinning);
 </script>
+
 </body>
 </html>
