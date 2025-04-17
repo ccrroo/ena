@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #fceff9, #f9f0ff);
+      background: linear-gradient(135deg, #eaffea, #f0fff0);
       margin: 0;
       padding: 0;
       display: flex;
@@ -24,8 +24,8 @@
 
     h1 {
       font-size: 2.5em;
-      color: #ff69b4;
-      text-shadow: 1px 1px #fff;
+      color: #66bb6a; /* メインの黄緑 */
+      text-shadow: 1px 1px #ffffff;
       margin: 0;
     }
 
@@ -38,12 +38,12 @@
     }
 
     .cute-button {
-      background: #fff0f6;
-      border: 2px solid #ffb6c1;
+      background: #f0fff4;
+      border: 2px solid #a5d6a7;
       padding: 15px 25px;
       border-radius: 30px;
       font-size: 1.1em;
-      color: #d6336c;
+      color: #2e7d32;
       cursor: pointer;
       box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease;
@@ -52,9 +52,9 @@
     }
 
     .cute-button:hover {
-      background: #ffe0ef;
+      background: #e0ffe0;
       transform: scale(1.05);
-      box-shadow: 0 0 15px #ffb6c1;
+      box-shadow: 0 0 15px #a5d6a7;
     }
 
     .character-gallery {
@@ -74,15 +74,16 @@
     }
 
     .character-image:hover {
-      transform: scale(1.05);
+      animation: sway 1s ease-in-out infinite;
     }
 
     footer {
       padding: 20px;
-      color: #999;
+      color: #666;
       font-size: 0.9em;
     }
 
+    /* アニメーション */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -98,6 +99,14 @@
       from { opacity: 0; transform: translateY(40px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    @keyframes sway {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(2deg); }
+      50% { transform: rotate(0deg); }
+      75% { transform: rotate(-2deg); }
+      100% { transform: rotate(0deg); }
+    }
   </style>
 </head>
 <body>
@@ -111,11 +120,9 @@
     <button class="cute-button" onclick="alert('コンテンツは準備中です…！')">もっと見る</button>
   </div>
 
+
   <div class="character-gallery">
-    <img src="image/enatou.png" alt="キャラ1" class="character-image" />
-    <img src="image/enatou.png" alt="キャラ2" class="character-image" />
-    <img src="image/enatou.png" alt="キャラ3" class="character-image" />
-    <!-- 必要に応じてここにさらに画像追加 -->
+    <img src="image/enatou.png" alt="キャラ1" class="character-image" 
   </div>
 
   <footer>© 2025 えな All Rights Reserved.</footer>
