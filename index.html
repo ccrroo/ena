@@ -24,7 +24,7 @@
 
     h1 {
       font-size: 2.5em;
-      color: #66bb6a; /* メインの黄緑 */
+      color: #66bb6a;
       text-shadow: 1px 1px #ffffff;
       margin: 0;
     }
@@ -59,17 +59,17 @@
 
     .character-gallery {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 30px;
       margin: 60px 0 40px;
       padding: 0 20px;
+      width: 100%;
     }
 
     .character-image {
       max-width: 180px;
       height: auto;
-      animation: fadeInUp 1.2s ease;
       transition: transform 0.3s ease;
     }
 
@@ -95,11 +95,6 @@
       100% { transform: scale(1); }
     }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
     @keyframes sway {
       0% { transform: rotate(0deg); }
       25% { transform: rotate(2deg); }
@@ -115,14 +110,14 @@
   </header>
 
   <div class="button-container">
-    <button class="cute-button" onclick="alert('えなを応援してくれてありがとう♡')">応援メッセージ</button>
+    <button class="cute-button" onclick="alert('えなを応援してくれてありがとう♡')">えなスイッチ</button>
     <a class="cute-button" href="https://x.com/Ena_24s" target="_blank">X（旧Twitter）へ</a>
     <button class="cute-button" onclick="alert('コンテンツは準備中です…！')">もっと見る</button>
   </div>
 
-
+  <!-- キャラ画像 真ん中寄せ -->
   <div class="character-gallery">
-    <img src="image/enatou.png" alt="キャラ1" class="character-image" 
+    <img src="image/enatou.png" alt="キャラ1" class="character-image" />
   </div>
 
   <footer>© 2025 えな All Rights Reserved.</footer>
